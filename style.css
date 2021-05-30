@@ -1,0 +1,327 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color:black;   /* choix couleurs https://www.w3.org/wiki/CSS/Properties/color/keywords   */
+    background: center/105% url(media/bkpground.body.html.jpg);
+    background-repeat: no-repeat;    
+    display: flex;  /*  ... pour pouvoir utiliser les règles de flex => responsive  */
+    flex-direction: column;
+    align-items: center;
+    width: 95%;  /* pour dégager la scrollbar */
+    height: 100%;
+}
+
+.mainContent {   /*! création d'un conainer à l'intérieur du body;   de manière à ne pas remplir 
+    toute la page...  */
+    width: 70%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 40px 10px 45px;
+}
+
+
+h1 {
+    font-family: "courier new", monospace;
+    color: white; 
+    text-shadow: 6px 6px 50px aqua;  
+}   
+
+h2 {
+    font-family: "courier new", monospace;
+    color:red;
+}
+
+.img{
+    align-items: center;
+    height: 50%;
+    width: 50%;
+}
+
+.monNom {
+    display: flex;
+    flex-direction: row;
+    width:30%;
+    border: solid 0.2em;
+    border-color: antiquewhite;
+    background-color: rgb(26, 25, 25);
+    border-radius: 10px;
+    padding: 0 5%;            
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: solid 0.2em;
+    border-color: antiquewhite;
+    background-color: black;
+    border-radius: 10px;
+    align-items: center;
+    align-content: space-between;
+    margin: 7px 0;    
+}
+
+.profile div{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.ul-profile {    /* règles pour toutes les listes de la class profile */
+    font-family: "courier new", monospace;  
+    font-size: larger;
+    color:red;
+     padding: 0px 15px 0px 0px;
+    /* width: 40em; */
+    }
+
+.profile a {       /* règles CSS pour les balises <a> de la section Profile */
+        font-family: cursive;
+        font-size:larger;
+        color:red;
+        text-decoration:white;
+        font-family: "courier new", monospace;
+        font-size: larger;
+                
+      }    
+      
+.profile a:hover, a:focus, a:active {       /* règles CSS pour animation des balises <a>  Section Profile */
+        color:white;
+        text-decoration:none;
+    }
+
+.sectionMotivations {
+    display:flex;  /* Règles CSS DIV  SectionMotivations */
+    flex-direction:row;   
+    width: 100%;
+    border: solid 0.2em;
+    border:1px dotted black;
+    border-width:2px;
+    border-style:groove;
+    border-color: antiquewhite;
+    background-color:black;   
+    border-radius: 10px;
+    font-family: "courier new", monospace;
+    font-size:larger;
+    color:red;
+    align-items:center;
+  }
+
+    .sectionMotivations div{
+        display: flex;
+        flex-direction: column;
+               
+    }
+
+    .sectionMotivations li{               /* règles CSS pour listes à puces Section Motivations */
+    list-style-image: url("media/puces-simplon.png");
+    /* list-style-type: disclosure-closed; */
+    
+    }
+
+    a {                         
+        font-family: cursive;
+        font-size:larger;
+        color:white;
+        text-decoration: none;
+                
+      }    
+      
+    a:hover, a:focus, a:active {    
+        color: red;
+        text-decoration:none;
+    }
+   
+.sectionOnline {
+    display: flex;  
+    flex-direction:column;   
+    width: 100%;
+    border: solid 0.2em;
+    border:1px dotted black;
+    border-width:2px;
+    border-style:groove;
+    border-color: antiquewhite;
+    background-color: cadetblue;
+    color:red;
+    background: no-repeat center/100% url("media/online3.svg");
+    align-items: center;
+    font-family: "courier new", monospace;
+    font-size:larger;
+    border-radius: 10px;
+    margin: 7px 0;
+    
+}
+
+.sectionOnline p{
+    font-family: cursive;
+    font-size:larger;
+    color:white;
+
+    animation-duration: .8s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+}
+
+    @keyframes clignoter {
+       0%   { opacity:1; }
+       40%   {opacity:0; }
+       100% { opacity:1; }
+    }
+
+    
+.sectionOnline ul{
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content:space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    font-size:larger;
+    color:white;
+}
+
+.sectionOnline li{   /* Règles CSS liste à puces DIV  SectionOnline */  
+    display: block;
+    flex: 0 1 auto; 
+    list-style-type: none;
+    color:white;
+}
+
+
+#hobbies{   /* un id rend l'élément unique *  Règles CSS DIV  HOBBIES */
+    display: flex;  
+    flex-direction:row;   
+    width: 89%;
+    justify-content:space-between;
+    border: solid 0.2em;
+    border:1px dotted black;
+    border-width:2px;
+    border-style:groove;
+    border-color: antiquewhite;
+    background-color:black;
+    border-radius: 10px;
+    padding: 5px 50px 5px;
+     
+}
+
+.contentLeft {
+    width: 35%; 
+    float:left
+}
+
+.contentRight {
+    width: 65%;
+    float:right
+}
+
+
+/*         Tentatives:           Règles CSS pour écrans Smartphone      */
+@media (max-width: 640px) {
+	* {
+		box-sizing: border-box;
+	}
+	
+	/* passer body (et tous les éléments de largeur fixe) en largeur automatique */
+
+	body {
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+	
+    /*  ***************************************************************************** */
+	/* fixer une largeur maximale de 100% aux éléments potentiellement problématiques */
+    /* ****************************************************************************** */
+    @media (max-width: 640px) {
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* passer body (et tous les éléments de largeur fixe) en largeur automatique */
+    
+        body {
+            width: auto;
+            margin: 0;
+            padding: 0;
+        }
+	
+    img,
+	table,
+	td,
+	blockquote,
+	code,
+	pre,
+	textarea,
+	input,
+	iframe,
+	object,
+	embed,
+	video {
+		max-width: 100%;
+	}
+	
+	/* conserver le ratio des images */
+
+	img {
+		height: auto;
+	}
+	
+	/* gestion des mots longs */
+
+	textarea,
+	table,
+	td,
+	th,
+	code,
+	pre,
+	samp {
+		-webkit-hyphens: auto; /* césure propre */
+		-moz-hyphens: auto;
+		hyphens: auto;
+		word-wrap: break-word; /* passage à la ligne forcé */
+	}
+	
+	code,
+	pre,
+	samp {
+		white-space: pre-wrap; /* passage à la ligne spécifique pour les éléments à châsse fixe */
+	}
+	
+	/* Passer à une seule colonne (à appliquer aux éléments multi-colonnes) */
+
+	.element1,
+	.element2 {
+		float: none;
+		width: auto;
+	}
+	
+	/* masquer les éléments superflus */
+
+	.hide_mobile {
+		display: none !important;
+	}
+	
+	/* Un message personnalisé */
+
+	body:before {
+		content: "Version mobile du site";
+		display: block;
+		text-align: center;
+		font-style: italic;
+		color: #777;
+	}
+}
+La touche finale : réduire de façon harmonieuse toutes les tailles de polices en orientation paysage (car bugguée sur les périphériques iPhone et iPad).
+
+@media (max-device-width:768px) and (orientation: landscape) {
+  html {
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+  }
+}
